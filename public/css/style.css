@@ -1,0 +1,138 @@
+body{
+    font-family: 'Plus Jakarta Sans' , sans-serif !important;
+    display: flix;
+    flex-direction:column ;
+    min-height: 100vh; ;
+}
+.conatiner{
+    flex: 1;
+}
+
+.navbar{
+    height: 5 rem;
+    background-color: white;
+}
+
+.fa-compass{
+    color: #fe424d;
+    font-size: 2 rem;
+}
+
+.nav-link{
+   color: #222222 !important;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top: 1px solid #ddd;
+    font-family: Arial, sans-serif;
+}
+
+/* Footer sections */
+.f-info, .f-info-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Social icons */
+.f-info i {
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: #333;
+}
+
+.f-info i:hover {
+    color: #0077ff; /* You can change this color */
+    transform: scale(1.2);
+}
+
+/* Copyright text */
+footer div:nth-child(2) {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Links */
+.f-info-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.f-info-links a:hover {
+    color: #0077ff;
+    text-decoration: underline;
+}
+
+/* Make it responsive */
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+/* card styling */
+
+.card{
+    border : none !important;
+    margin-bottom: 2rem ;
+}
+
+.card-img-top{
+    border-radius: 1 rem;
+    width: 100% m !important;
+    object-fit: cover !important;
+}
+
+.card-body{
+    padding: 0;
+
+}
+.card-text{
+    font-size: 
+}
+
+/* listing-link */
+.listing-link{
+    text-decoration: none;
+}
+/* Card Effect */
+
+.card-img-overlay{
+    opacity: 0;
+}
+
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+
+.add-btn{
+    background-color:  #fe424d !important;
+    color: #222222;
+    border: none !important;
+}
+
+/* edit page */
+.edit-btn{
+     background-color:  #fe424d !important;
+    color: #222222;
+    border: none !important;
+}
+
+/* showPage */
+
+.show-image{
+    height: 30vh;
+    
+}

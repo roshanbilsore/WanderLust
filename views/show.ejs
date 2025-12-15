@@ -1,21 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>wonderlust</title>
-</head>
-<body style="background-color: black; color: white;">
-     <ul>
-        <li style="background-color: aqua; color: black;"> Title: <%= listing.title %></li>
-        <li>Id: <%= listing.id %></li>
-        <li>Description: <%= listing.description %></li>
-        <li>Price: <span>&#8377;</span><%= listing.price.toLocaleString("en-IN")  %></li>
-        <li>Location : <%= listing.location %></li>
-     </ul>
-     <a href="/listing/<%= listing.id %>/edit">Edit Listing</a>
-     <form method="POST" action="/listing/<%= listing.id %>?_method=DELETE">
-         <button type="submit">Delete Listing</button>
-     </form>
-</body>
-</html>
+<% layout("/layout/boilerplate.ejs") %>
+
+<div class="container mt-4">
+  <div class="row justify-content-center">
+
+    <!-- Heading -->
+    <div class="col-md-8 mb-3">
+      <h3>Listing Details</h3>
+    </div>
+
+    <!-- Card -->
+    <div class="col-md-8">
+      <div class="card shadow-sm">
+
+        <img 
+          src="<%= listing.image.url %>" 
+          class="card-img-top show-image" 
+          alt="listing_image"
+        >
+
+        <div class="card-body">
+          <h5 class="card-title"><%= listing.title %></h5>
+
+          <p class="card-text">
+            <%= listing.description %>
+          </p>
+
+          <p class="card-text">
+            <strong>Price:</strong> ₹<%= listing.price.toLocaleString("en-IN") %>
+          </p>
+
+          <p class="card-text">
+            <strong>Location:</strong> <%= listing.location %>
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="d-flex gap-2 mt-3">
+            <a 
+              href="/listing/<%= listing.id %>/edit" 
+              class="btn btn-primary"
+            >
+              Edit
+            </a>
+
+            <form 
+              method="POST" 
+              action="/listing/<%= listing.id %>?_method=DELETE"
+            >
+              <button type="submit" class="btn btn-danger">
+                Delete
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

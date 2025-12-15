@@ -1,20 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NewListing Form</title>
-</head>
-<body>
-    <h3>Add Your Propeties / Listing</h3>
-    <form method="POST" action="/listing">
-      <input type="text" name="listing[title]" placeholder="Enter the title">
-      <textarea name="listing[description]" placeholder="Enter the description"></textarea>
-      <input type="number" name="listing[price]" placeholder="Enter the price">
-      <input type="text" name="listing[location]" placeholder="Enter the location">
-      <input type="text" name="listing[country]" placeholder="Enter the country">
-      <button type="submit">Add</button>
-    </form>
+<% layout("/layout/boilerplate") %>
 
-</body>
-</html>
+ 
+    <div class="row mt-3">
+      <div class="col-8 offset-2">
+
+        <h3>Add Your Propeties / Listing</h3><br><br>
+        <form method="POST" action="/listing">
+          <div class="mb-3">
+            <label for="title" class="form-control">Title</label>
+            <input type="text" name="listing[title]" placeholder="Add catchy the title">
+          </div>
+          <div class="mb-3">
+            <label for="description" class="form-control">Description</label>
+            <textarea name="listing[description]" placeholder="Enter the description"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="price" class="form-control">Price</label>
+            <input type="number" name="listing[price]" placeholder="eg 3000 , 4000">
+          </div>
+          <div class="row">
+            <div class="mb-3 col-md-8">
+              <label for="location" class="form-control">Location</label>
+              <input type="text" name="listing[location]" placeholder="eg Jaipur , pune ..">
+            </div>
+            <div class="mb-3 col-md-4">
+              <label for="country" class="form-control">Country</label>
+              <input type="text" name="listing[country]" placeholder="eg India..">
+            </div>
+          </div>
+          <br><br>
+
+          <button type="submit" class="btn  add-btn mt-3">Add</button>
+
+
+
+        </form>
+      </div>
+    </div>
+
