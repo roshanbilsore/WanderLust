@@ -5,24 +5,33 @@
       <div class="col-8 offset-2">
 
         <h3>Add Your Propeties / Listing</h3><br><br>
-        <form method="POST" action="/listing">
+        <form method="POST" action="/listing" class="needs-validation">
           <div class="mb-3">
             <label for="title" class="form-control">Title</label>
             <input type="text" name="listing[title]" placeholder="Add catchy the title">
           </div>
+
           <div class="mb-3">
             <label for="description" class="form-control">Description</label>
             <textarea name="listing[description]" placeholder="Enter the description"></textarea>
           </div>
+
           <div class="mb-3">
             <label for="price" class="form-control">Price</label>
             <input type="number" name="listing[price]" placeholder="eg 3000 , 4000">
           </div>
+
+          <div class="mb-3">
+            <label for="image" class="form-control">Image Url</label>
+            <input type="text" name="listing[image]" placeholder="Enter the Url of listing">
+          </div>
+
           <div class="row">
             <div class="mb-3 col-md-8">
               <label for="location" class="form-control">Location</label>
               <input type="text" name="listing[location]" placeholder="eg Jaipur , pune ..">
             </div>
+
             <div class="mb-3 col-md-4">
               <label for="country" class="form-control">Country</label>
               <input type="text" name="listing[country]" placeholder="eg India..">
