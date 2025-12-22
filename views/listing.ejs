@@ -1,5 +1,6 @@
-<% layout("/layout/boilerplate") %>
-    <body>
+<% layout("/layout/boilerplate") %>  
+        <h3>All Listing</h3>
+        
         <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
             <% for(let listing of allListing){ %>
                 <a href="/listing/<%= listing._id %>" class="listing-link">
@@ -15,9 +16,7 @@
                                 &#8377; <%= listing.price.toLocaleString ("en-IN") %> / Night
                             </p>
                         </div>
-                    </div>F
+                    </div>
                 </a>
                 <% } %>
         </div>
-
-    </body>
